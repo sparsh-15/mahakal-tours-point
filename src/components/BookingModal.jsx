@@ -52,7 +52,7 @@ const BookingModal = ({ isOpen, onClose, selectedPackage }) => {
 
   return (
     <div 
-      className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4 overflow-hidden"
+      className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-5 overflow-hidden"
       onClick={onClose}
     >
       <div 
