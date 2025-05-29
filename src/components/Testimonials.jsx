@@ -67,7 +67,7 @@ export default function Testimonials() {
   return (
     <section
       className="py-20 bg-gradient-to-br from-purple-50 to-orange-50"
-      aria-label="Testimonials"
+      aria-label="Testimonials" id="reviews"
     >
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-12">

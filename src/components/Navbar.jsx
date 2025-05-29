@@ -3,10 +3,10 @@ import { MapPin, Phone, Menu, X } from "lucide-react";
 
 const navLinks = [
   { name: "Home", href: "/" },
-  { name: "TourPackages", href: "/Packages" },
-  { name: "Services", href: "/Services" },
-  { name: "Gallery", href: "/Gallery" },
-  { name: "Reviews", href: "/Reviews" },
+  { name: "TourPackages", href: "#packages" },
+  { name: "Services", href: "#services" },
+  { name: "Gallery", href: "#gallery" },
+  { name: "Reviews", href: "#reviews" },
 ];
 
 function Navbar() {

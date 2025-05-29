@@ -1,0 +1,9 @@
+ <Navbar />
+      <HeroCarousel />
+      <WhyMahakalTours />
+      <TourPackages />
+      <Services/>
+      <Gallery/>
+      <Testimonials/>
+      <ContactUs/>
+      <Footer/>

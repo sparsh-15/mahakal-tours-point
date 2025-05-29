@@ -72,7 +72,7 @@ export default function Gallery() {
   }, []);
 
 return (
-  <section className="py-20 bg-gradient-to-b from-white via-gray-50 to-white" aria-label="Gallery Section">
+  <section className="py-20 bg-gradient-to-b from-white via-gray-50 to-white" aria-label="Gallery Section" id="gallery">
     <div className="max-w-7xl mx-auto px-6 text-center mb-16">
       <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
         Explore{" "}

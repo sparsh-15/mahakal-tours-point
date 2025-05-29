@@ -1,30 +1,19 @@
 import { useState } from 'react'
-import './App.css'
-import Navbar from './components/Navbar'
-import HeroCarousel from './components/HeroCarousel'
-import WhyMahakalTours from './components/WhyMahakalTours'
-import TourPackages from './components/TourPackages'
-import Services from './components/Services'
-import Gallery from './components/Gallery'
-import Testimonials from './components/Testimonials'
-import ContactUs from './components/ContactUs'
-import Footer from './components/Footer'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+import './App.css'
+import PackageDetail from './pages/PackageDetail';
+import Home from './pages/Home';
 
 function App() {
 
   return (
-    <>
-      <Navbar />
-      <HeroCarousel />
-      <WhyMahakalTours />
-      <TourPackages />
-      <Services/>
-      <Gallery/>
-      <Testimonials/>
-      <ContactUs/>
-      <Footer/>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/packages/:id" element={<PackageDetail />} />
+      </Routes>
+    </Router>
   )
 }
 

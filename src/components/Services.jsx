@@ -57,7 +57,7 @@ export default function Services() {
   }, []);
 
   return (
-    <section className="py-16 bg-gray-50" aria-label="Services Section">
+    <section className="py-16 bg-gray-50" aria-label="Services Section" id="services">
       <div className="max-w-7xl mx-auto px-6 text-center mb-12">
         <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
           Our <span className="text-gradient bg-gradient-to-r from-purple-600 to-orange-500 bg-clip-text text-transparent">Services</span>
