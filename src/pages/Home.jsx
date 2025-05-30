@@ -8,11 +8,13 @@ import Gallery from '../components/Gallery';
 import Testimonials from '../components/Testimonials';
 import ContactUs from '../components/ContactUs';
 import Footer from '../components/Footer';
+import FloatingIcons from '../components/FloatingIcons';
 
 
 function Home() {
     return (
         <>
+            <FloatingIcons/>
             <Navbar />
             <HeroCarousel />
             <WhyMahakalTours />

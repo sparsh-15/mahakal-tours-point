@@ -76,7 +76,7 @@ return (
     <div className="max-w-7xl mx-auto px-6 text-center mb-16">
       <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
         Explore{" "}
-        <span className="bg-gradient-to-r from-purple-600 to-orange-500 bg-clip-text text-transparent">
+        <span className="bg-gradient-to-r from-pink-500 to-red-600 bg-clip-text text-transparent">
           Famous Places
         </span>
       </h2>

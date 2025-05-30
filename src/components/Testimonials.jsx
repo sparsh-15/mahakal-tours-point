@@ -72,7 +72,7 @@ export default function Testimonials() {
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-12">
           What Our{" "}
-          <span className="bg-gradient-to-r from-purple-600 to-orange-500 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-pink-500 to-red-600 bg-clip-text text-transparent">
             Pilgrims Say
           </span>
         </h2>

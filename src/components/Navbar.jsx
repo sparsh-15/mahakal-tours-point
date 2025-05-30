@@ -38,23 +38,25 @@ function Navbar() {
             className="flex items-center space-x-3"
             aria-label="Homepage"
           >
-            <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-orange-500 rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 bg-gradient-to-br from-pink-500 to-red-500 rounded-lg flex items-center justify-center">
               <MapPin className="w-6 h-6 text-white" />
             </div>
             <div className="text-2xl font-bold flex items-center">
               <span
-                className={`bg-clip-text text-transparent font-extrabold transition-colors duration-300
+                className={`font-extrabold transition-colors duration-300
                   ${scrolled
-                    ? "bg-gradient-to-r from-purple-700 to-purple-900" // Dark gradient for white bg
-                    : "text-white"
-                  }  // White text on transparent bg`}
-              >Mahakal</span>
+                    ? "text-gray-800"  
+                    : "text-white"     
+                  }`}
+              >
+                Mahakal
+              </span>
               <span
                 className={`ml-1 font-semibold transition-colors duration-300
                   ${scrolled
-                    ? "text-orange-600" // Slightly darker orange on white bg
+                    ? "text-red-500"
                     : "text-orange-500"
-                  }   // Original orange on transparent bg`}
+                  }`}
               >Tours</span>
             </div>
           </a>
@@ -75,7 +77,7 @@ function Navbar() {
                 <span
                   className={`absolute -bottom-1 left-0 h-0.5 w-0 transition-all duration-300
                     ${scrolled
-                      ? "bg-gradient-to-r from-purple-600 to-orange-500 group-hover:w-full"
+                      ? "bg-gradient-to-r from-pink-600 to-red-500 group-hover:w-full"
                       : "bg-white group-hover:w-full"
                     }`}
                 ></span>
@@ -85,7 +87,7 @@ function Navbar() {
             {/* CTA */}
             <a
               href="tel:+919999999999"
-              className="flex items-center space-x-2 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-3 rounded-full font-medium transition-transform duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              className="flex items-center space-x-2 bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700 text-white px-4 py-3 rounded-full font-medium transition-transform duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               <Phone className="w-4 h-4" />
               <span>Call Now</span>

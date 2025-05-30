@@ -57,10 +57,10 @@ export default function Footer() {
           <p className="mb-3 text-gray-400">
             123 Pilgrim Street, Ujjain, MP, India
           </p>
-          <p className="mb-1 text-gray-400">Email: contact@mahakaltours.com</p>
-          <p className="mb-6 text-gray-400">Phone: +91 98765 43210</p>
+          <a href="mailto:contact@example.com" className="mb-2 flex text-gray-400">Email: contact@mahakaltours.com</a>
+          <a href="tel:+919999999999" className="mb-2 text-gray-400">+91 98765 43210</a>
 
-          <div className="flex space-x-6">
+          <div className="flex space-x-6 mt-3">
             {/* Facebook */}
             <a
               href="https://facebook.com"
