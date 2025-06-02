@@ -5,7 +5,8 @@ import {
   FaWhatsapp,
   FaLinkedin,
   FaComments,
-  FaTimes, // Cross icon
+  FaTimes,
+  FaInstagram, // Cross icon
 } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { motion, AnimatePresence } from "framer-motion";
@@ -50,13 +51,13 @@ const ContactWidget = () => {
             </a>
 
             <a
-              href="https://linkedin.com/in/your-profile"
+              href="https://instagram.com/in/your-profile"
               className="bg-gradient-to-r from-blue-700 to-blue-900 text-white p-3 rounded-full shadow-lg hover:scale-110 transition-transform"
-              title="LinkedIn"
+              title="Instagram"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaLinkedin size={iconSize} />
+              <FaInstagram size={iconSize} />
             </a>
           </motion.div>
         )}

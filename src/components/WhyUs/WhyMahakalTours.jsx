@@ -161,9 +161,8 @@ const WhyMahakalTours = () => {
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div
-          className={`text-center mb-20 transition-all duration-1000 ease-out transform ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
+          className={`text-center mb-20 transition-all duration-1000 ease-out transform ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
         >
           {/* Top Icon and Subtitle */}
           <div className="flex items-center justify-center mb-4 animate-fade-in-down delay-200">
@@ -195,9 +194,8 @@ const WhyMahakalTours = () => {
 
         {/* Stats Section */}
         <div
-          className={`grid grid-cols-2 md:grid-cols-4 gap-8 mb-20 transition-all duration-1000 delay-200 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
+          className={`grid grid-cols-2 md:grid-cols-4 gap-8 mb-20 transition-all duration-1000 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
         >
           <div className="text-center bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
             <div className="text-3xl md:text-4xl font-bold text-purple-600 mb-2">
@@ -231,11 +229,10 @@ const WhyMahakalTours = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className={`bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 hover:transform hover:-translate-y-2 ${
-                isVisible
+              className={`bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 hover:transform hover:-translate-y-2 ${isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-10"
-              }`}
+                }`}
               style={{ transitionDelay: `${300 + index * 100}ms` }}
             >
               <div
@@ -255,9 +252,8 @@ const WhyMahakalTours = () => {
 
         {/* Testimonials */}
         <div
-          className={`transition-all duration-1000 delay-500 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
+          className={`transition-all duration-1000 delay-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-800 mb-4">
@@ -304,35 +300,34 @@ const WhyMahakalTours = () => {
         </div>
 
         {/* CTA Section */}
-       <div           
-  className={`bg-gradient-to-r from-red-100 via-pink-50 to-red-100 rounded-3xl p-8 md:p-12 text-center text-gray-700 transition-all duration-1000 delay-700 ${             
-    isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"           
-  }`}         
->           
-  <h3 className="text-3xl md:text-4xl font-semibold mb-4">             
-    Ready for Your Spiritual Journey?           
-  </h3>           
-  <p className="text-lg mb-8 opacity-80">             
-    Join thousands of satisfied travelers who chose Mahakal Tours for             
-    their unforgettable experiences           
-  </p>           
-  <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">             
-    <a               
-      href="tel:+919999999999"               
-      className="flex items-center space-x-2 bg-white text-red-500 px-8 py-4 rounded-full font-semibold text-lg hover:bg-red-50 transition-all duration-300 transform hover:scale-105 shadow-sm"             
-    >               
-      <Phone className="w-5 h-5" />               
-      <span>Call Now: +91 99999 99999</span>             
-    </a>             
-    <a               
-      href="#contact"               
-      className="flex items-center space-x-2 border-2 border-pink-300 text-red-500 px-8 py-4 rounded-full font-semibold text-lg hover:bg-pink-200 hover:text-red-700 transition-all duration-300 transform hover:scale-105"             
-    >               
-      <CheckCircle className="w-5 h-5" />               
-      <span>Book Your Tour</span>             
-    </a>           
-  </div>         
-</div>
+        <div
+          className={`bg-gradient-to-r from-red-100 via-pink-50 to-red-100 rounded-3xl p-8 md:p-12 text-center text-gray-700 transition-all duration-1000 delay-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
+        >
+          <h3 className="text-3xl md:text-4xl font-semibold mb-4">
+            Ready for Your Spiritual Journey?
+          </h3>
+          <p className="text-lg mb-8 opacity-80">
+            Join thousands of satisfied travelers who chose Mahakal Tours for
+            their unforgettable experiences
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a
+              href="tel:+919999999999"
+              className="flex items-center space-x-2 bg-white text-red-500 px-8 py-4 rounded-full font-semibold text-lg hover:bg-red-50 transition-all duration-300 transform hover:scale-105 shadow-sm"
+            >
+              <Phone className="w-5 h-5" />
+              <span>Call Now: +91 99999 99999</span>
+            </a>
+            <a
+              href="#contact"
+              className="flex items-center space-x-2 border-2 border-pink-300 text-red-500 px-8 py-4 rounded-full font-semibold text-lg hover:bg-pink-200 hover:text-red-700 transition-all duration-300 transform hover:scale-105"
+            >
+              <CheckCircle className="w-5 h-5" />
+              <span>Book Your Tour</span>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 import { Mountain, CalendarCheck, IndianRupee, MapPinned } from "lucide-react";
-import {packages} from "../data/packagesData"
+import {packages} from "../../data/packagesData"
 import { Link } from "react-router-dom";
 
 

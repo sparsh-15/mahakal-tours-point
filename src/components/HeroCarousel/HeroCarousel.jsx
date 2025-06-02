@@ -12,13 +12,13 @@ const MediaCarousel = () => {
   const mediaItems = [
     {
       type: "image",
-      src: "https://images.unsplash.com/photo-1658730458768-8b8cc0c00955?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dWpqYWlufGVufDB8fDB8fHww",
+      src: "https://images.cnbctv18.com/uploads/2024/10/mahakaleshwar-temple-ujjain-2024-10-5e82f1d718c21e6f98b8040456adaf4c.jpg",
       title: "Mahakaleshwar Temple",
       description: "Experience the divine atmosphere of the ancient Mahakaleshwar Temple"
     },
     {
-      type: "video",
-      src: "https://player.vimeo.com/external/434045526.sd.mp4?s=c27eecc69a27dbc4ff2b87d38afc35f1c9a917c6&profile_id=139&oauth2_token_id=57447761",
+      type: "image",
+      src: "https://s7ap1.scene7.com/is/image/incredibleindia/ujjain%20city-ujjain-madhya-pradesh-hero?qlt=82&ts=1726675111784",
       poster: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
       title: "Ujjain City Tour",
       description: "Take a virtual tour of the sacred city of Ujjain"
@@ -38,7 +38,7 @@ const MediaCarousel = () => {
     {
       type: "video",
       src: "https://player.vimeo.com/external/371433846.sd.mp4?s=236ffd183c3fb9b5ca5b53e9061a5b1df5f3e08e&profile_id=139&oauth2_token_id=57447761",
-      poster: "https://www.shutterstock.com/shutterstock/photos/2173332103/display_1500/stock-photo--feb-exterior-view-of-mahakaleshwar-temple-ujjain-madhya-pradesh-india-asia-2173332103.jpg",
+      poster: "https://images.moneycontrol.com/static-hindinews/2025/01/Mahakumbh02A.jpg?impolicy=website&width=1600&height=900",
       title: "Cultural Experience",
       description: "Immerse yourself in local traditions and cultural experiences"
     }
