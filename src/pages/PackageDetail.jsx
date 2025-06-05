@@ -1,9 +1,9 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { packages } from "../data/packagesData";
-import Navbar from "../components/Navbar";  // Adjust path as per your structure
-import Footer from "../components/Footer";
-import BookingModal from "../components/BookingModal";
+import Navbar from "../components/Header/Navbar/Navbar"
+import Footer from "../components/Header/Footer/Footer"
+import BookingModal from "../components/BookingModal/BookingModal";
 import { useEffect, useRef, useState } from 'react';
 
 export default function PackageDetails() {
@@ -308,7 +308,7 @@ export default function PackageDetails() {
   if (!pkg) {
     return (
       <>
-        <Navbar />
+        <Navbar/>
         <div className="p-10 text-red-600 text-center text-xl">
           Package not found.
         </div>
@@ -321,14 +321,14 @@ export default function PackageDetails() {
     <>
       <Navbar />
 
-      <main className="max-w-5xl mx-auto p-6 mt-10">
+      <main className="max-w-5xl mx-auto p-6 mt-20">
         {/* Hero Section with Gradient Overlay */}
         <div className="relative mb-8 rounded-2xl overflow-hidden shadow-2xl">
           <img
             ref={heroRef}
             src={pkg.image}
             alt={pkg.name}
-            className="w-full h-80 object-cover"
+            className="w-full h-96 object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
           <div className="absolute bottom-6 left-6 text-white">

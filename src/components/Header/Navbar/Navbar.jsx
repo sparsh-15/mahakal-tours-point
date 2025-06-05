@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { MapPin, Phone, Menu, X } from "lucide-react";
+import { useLocation } from "react-router-dom";
+
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -12,12 +14,24 @@ const navLinks = [
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const { pathname } = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 10);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+
+    if (pathname !== "/") {
+      setScrolled(true); // Force white navbar on non-home routes
+    } else {
+      setScrolled(window.scrollY > 10); // Initial check
+      window.addEventListener("scroll", handleScroll);
+    }
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [pathname]);
 
   const closeMobileMenu = () => setIsOpen(false);
 
@@ -45,8 +59,8 @@ function Navbar() {
               <span
                 className={`font-extrabold transition-colors duration-300
                   ${scrolled
-                    ? "text-gray-800"  
-                    : "text-white"     
+                    ? "text-gray-800"
+                    : "text-white"
                   }`}
               >
                 Mahakal
@@ -67,18 +81,38 @@ function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
-                className={` relative font-semibold transition-all duration-300 text-lg
-                  ${scrolled
-                    ? "text-gray-800 hover:text-purple-700"
-                    : "text-white hover:text-orange-400"
+                className={`group relative font-semibold transition-all duration-300 text-lg transform hover:scale-105 hover:-translate-y-1
+        ${scrolled
+                    ? "text-gray-800 hover:text-orange-600"
+                    : "text-white hover:text-yellow-300"
                   }`}
               >
                 {link.name}
+
+                {/* Animated underline */}
                 <span
-                  className={`absolute -bottom-1 left-0 h-0.5 w-0 transition-all duration-300
-                    ${scrolled
-                      ? "bg-gradient-to-r from-pink-600 to-red-500 group-hover:w-full"
-                      : "bg-white group-hover:w-full"
+                  className={`absolute -bottom-1 left-0 h-0.5 w-0 transition-all duration-300 group-hover:w-full
+          ${scrolled
+                      ? "bg-gradient-to-r from-orange-500 to-red-500"
+                      : "bg-gradient-to-r from-yellow-400 to-orange-500"
+                    }`}
+                ></span>
+
+                {/* Glow effect */}
+                <span
+                  className={`absolute inset-0 rounded-lg opacity-0 transition-all duration-300 group-hover:opacity-20 blur-sm
+          ${scrolled
+                      ? "bg-orange-500 group-hover:bg-orange-400"
+                      : "bg-yellow-400 group-hover:bg-yellow-300"
+                    }`}
+                ></span>
+
+                {/* Subtle background on hover */}
+                <span
+                  className={`absolute inset-0 -z-10 rounded-lg scale-0 transition-all duration-300 group-hover:scale-100
+          ${scrolled
+                      ? "bg-orange-50"
+                      : "bg-white/10 backdrop-blur-sm"
                     }`}
                 ></span>
               </a>

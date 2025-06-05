@@ -1,14 +1,14 @@
 import React from 'react'
-import Navbar from '../../components/Header/Navbar';
-import HeroCarousel from '../../components/HeroCarousel';
+import Navbar from '../../components/Header/Navbar/Navbar';
+import HeroCarousel from '../../components/HeroCarousel/HeroCarousel';
+import TourPackages from '../../components/Packages/TourPackages';
+import Services from '../../components/Services/Services';
+import Gallery from '../../components/Gallery/Gallery';
+import Testimonials from '../../components/Testimonials/Testimonials';
+import ContactUs from '../../components/ContactUs/ContactUs';
+import Footer from '../../components/Header/Footer/Footer';
+import FloatingIcons from '../../components/FloatingIcons/FloatingIcons';
 import WhyMahakalTours from '../../components/WhyMahakalTours';
-import TourPackages from '../../components/TourPackages';
-import Services from '../../components/Services';
-import Gallery from '../../components/Gallery';
-import Testimonials from '../../components/Testimonials';
-import ContactUs from '../../components/ContactUs';
-import Footer from '../../components/Header/Footer';
-import FloatingIcons from '../../components/FloatingIcons';
 
 
 function Home() {
