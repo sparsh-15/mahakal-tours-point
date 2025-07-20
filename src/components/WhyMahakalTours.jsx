@@ -18,67 +18,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const WhyMahakalTours = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [stats, setStats] = useState({
-    customers: 0,
-    years: 0,
-    destinations: 0,
-    rating: 0,
-  });
-  const sectionRef = useRef(null);
 
-  // Intersection Observer for animations
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.2 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
-  // Animate counters
-  useEffect(() => {
-    if (isVisible) {
-      const targets = {
-        customers: 5000,
-        years: 15,
-        destinations: 50,
-        rating: 4.8,
-      };
-      const duration = 2000;
-      const steps = 60;
-      const stepDuration = duration / steps;
-
-      let currentStep = 0;
-      const timer = setInterval(() => {
-        currentStep++;
-        const progress = currentStep / steps;
-
-        setStats({
-          customers: Math.floor(targets.customers * progress),
-          years: Math.floor(targets.years * progress),
-          destinations: Math.floor(targets.destinations * progress),
-          rating: Math.round(targets.rating * progress * 10) / 10,
-        });
-
-        if (currentStep >= steps) {
-          clearInterval(timer);
-          setStats(targets);
-        }
-      }, stepDuration);
-
-      return () => clearInterval(timer);
-    }
-  }, [isVisible]);
 
   const features = [
     {
@@ -145,6 +85,75 @@ const WhyMahakalTours = () => {
       rating: 5,
     },
   ];
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (isVisible) {
+      const targets = {
+        customers: 5000,
+        years: 15,
+        destinations: 50,
+        rating: 4.8,
+      };
+      const duration = 2000;
+      const steps = 60;
+      const stepDuration = duration / steps;
+
+      let currentStep = 0;
+      const timer = setInterval(() => {
+        currentStep++;
+        const progress = currentStep / steps;
+
+        setStats({
+          customers: Math.floor(targets.customers * progress),
+          years: Math.floor(targets.years * progress),
+          destinations: Math.floor(targets.destinations * progress),
+          rating: Math.round(targets.rating * progress * 10) / 10,
+        });
+
+        if (currentStep >= steps) {
+          clearInterval(timer);
+          setStats(targets);
+        }
+      }, stepDuration);
+
+      return () => clearInterval(timer);
+    }
+  }, [isVisible]);
+
+  const [isVisible, setIsVisible] = useState(false);
+  const [stats, setStats] = useState({
+    customers: 0,
+    years: 0,
+    destinations: 0,
+    rating: 0,
+  });
+  const sectionRef = useRef(null);
+
+  // Intersection Observer for animations
+
+
+  // Animate counters
+
+
+
+
 
   return (
     <section
@@ -230,8 +239,8 @@ const WhyMahakalTours = () => {
             <div
               key={index}
               className={`bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 hover:transform hover:-translate-y-2 ${isVisible
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-10"
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-10"
                 }`}
               style={{ transitionDelay: `${300 + index * 100}ms` }}
             >
